@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.yandex.YandexScriptsTestOne" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-04-18T17:55:51" hostname="LAPTOP-QKC3I26M" time="51.152">
+<testsuite name="ru.yandex.YandexScriptsTestOne" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-04-18T19:44:12" hostname="LAPTOP-QKC3I26M" time="14.624">
   <properties/>
-  <testcase name="testYandex" classname="ru.yandex.YandexScriptsTestOne" time="51.152">
-    <failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#uniq15871144151781358861&quot;}&#10;  (Session info: chrome=80.0.3987.163)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'LAPTOP-QKC3I26M', ip: '192.168.74.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.5'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.163, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\natit\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:31144}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 20ab4121f0781b191aa85cd42883423d&#10;*** Element info: {Using=id, value=uniq15871144151781358861}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#uniq15871144151781358861&quot;}
+  <testcase name="testYandex" classname="ru.yandex.YandexScriptsTestOne" time="14.624">
+    <failure message="org.openqa.selenium.NoSuchWindowException: no such window&#10;  (Session info: chrome=80.0.3987.163)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'LAPTOP-QKC3I26M', ip: '192.168.74.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.5'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.163, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\natit\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:4427}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 5a0b1db93cbade2e2144496f083921c8" type="org.openqa.selenium.NoSuchWindowException">org.openqa.selenium.NoSuchWindowException: no such window
   (Session info: chrome=80.0.3987.163)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPTOP-QKC3I26M', ip: '192.168.74.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.163, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\natit\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:31144}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 20ab4121f0781b191aa85cd42883423d
-*** Element info: {Using=id, value=uniq15871144151781358861}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.163, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\natit\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:4427}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5a0b1db93cbade2e2144496f083921c8
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -21,11 +19,8 @@ Session ID: 20ab4121f0781b191aa85cd42883423d
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at ru.yandex.YandexScriptsTestOne.testYandex(YandexScriptsTestOne.java:33)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:903)
+	at ru.yandex.YandexScriptsTestOne.testYandex(YandexScriptsTestOne.java:15)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -78,44 +73,50 @@ Session ID: 20ab4121f0781b191aa85cd42883423d
 </failure>
   </testcase>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 10137
+  <system-err><![CDATA[Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 35584
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-апр. 18, 2020 8:55:55 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+апр. 18, 2020 10:44:14 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-[1587232561.548][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232564.453][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232566.124][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232566.368][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232566.470][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232566.571][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232566.672][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232566.773][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232566.874][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232566.975][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232567.076][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232567.177][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232567.278][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232567.414][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232567.515][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232567.616][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232567.717][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232567.819][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232567.920][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232568.021][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232568.122][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232568.261][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232568.910][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232569.847][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232569.948][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232570.050][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232570.151][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232570.265][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232570.648][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232570.756][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232570.857][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232571.128][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232571.269][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587232571.370][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239056.486][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239056.626][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239057.299][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239057.648][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239058.000][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239058.183][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239058.537][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239058.640][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239058.741][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239058.843][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239060.807][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239060.924][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239061.255][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239061.357][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239061.460][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239061.563][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239061.665][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239061.767][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239061.870][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239061.972][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239062.075][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239062.176][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239062.279][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239062.380][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239062.482][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239062.586][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239062.688][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239062.789][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239062.992][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239063.093][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239063.200][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239063.302][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239063.404][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239063.841][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239064.218][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239064.655][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239064.758][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239064.862][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239064.967][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587239065.224][SEVERE]: Timed out receiving message from renderer: 0.100
 ]]></system-err>
 </testsuite>
