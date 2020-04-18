@@ -2,27 +2,34 @@ package ru.yandex.appmanager;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import ru.yandex.tests.TestBase;
 
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
     protected WebDriver wd;
-
     private boolean acceptNextAlert = true;
+
+
+    public void initYandexMarketSearch () throws InterruptedException {
+        //      ChromeOptions option = new ChromeOptions();
+        //    option.addArguments("--window-size=500,500");
+        //    wd = new ChromeDriver(option);
+        wd = new ChromeDriver();
+       // wd.manage().window().setSize(new Dimension(1920, 1080));
+        wd.manage().window().maximize();
+        wd.get("https://yandex.ru/");
+        wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        wd.findElement(By.id("text")).clear();
+        wd.findElement(By.id("text")).sendKeys("yandexmarket");
+        wd.findElement(By.id("text")).sendKeys(Keys.ENTER);
+    }
 
     public void stop () {
         wd.quit();
     }
 
-    public void initYandexMarketSearch () {
-        wd = new ChromeDriver();
-        wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        wd.get("https://yandex.ru/");
-        wd.manage().window().setSize(new Dimension(1920, 1080));
-        wd.findElement(By.id("text")).clear();
-        wd.findElement(By.id("text")).sendKeys("yandexmarket");
-        wd.findElement(By.id("text")).sendKeys(Keys.ENTER);
-    }
 
     public boolean isElementPresent (By by) {
         try {
@@ -68,8 +75,9 @@ public class ApplicationManager {
         wd.findElement(By.xpath("//div[@id='uniq15872317257651']/span")).click();
     }
 
-    public void changeWindow () {
+    public void changeWindow () throws InterruptedException {
         wd.switchTo().window("https://market.yandex.ru/");
+        Thread.sleep(2000);
     }
 
     public void selectProduct () {

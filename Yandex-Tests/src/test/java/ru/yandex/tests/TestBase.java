@@ -21,7 +21,4 @@ public class TestBase {
     }
 
 
-    public ApplicationManager getApplicationManager () {
-        return applicationManager;
-    }
 }
