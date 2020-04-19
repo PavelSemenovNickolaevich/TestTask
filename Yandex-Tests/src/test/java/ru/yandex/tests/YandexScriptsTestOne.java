@@ -6,11 +6,11 @@ public class YandexScriptsTestOne extends TestBase {
 
     @Test
     public void testYandex () throws Exception {
-        app.findYandexMarket();
-        app.selectProduct();
-        app.setHighPrice();
-        app.selectOption();
-        //       app.setProduct();
+        app.getTestsHelper().findYandexMarket();
+        app.getTestsHelper().selectProduct();
+        app.getTestsHelper().setHighPrice();
+        app.getTestsHelper().selectOption();
+        app.getTestsHelper().setProduct();
         //       app.findProduct();
     }
 
