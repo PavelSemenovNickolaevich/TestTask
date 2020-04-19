@@ -1,11 +1,9 @@
 package ru.yandex.appmanager;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TestsHelper {
     private WebDriver wd;
@@ -68,8 +66,6 @@ public class TestsHelper {
 
     public void findYandexMarket () throws InterruptedException {
         String oldWindowSet = wd.getWindowHandle();
-        // wd.findElements(By.cssSelector("div.organic__url-text")).get(0).click();
-        //wd.findElements(By.cssSelector("div.organic__url-text")).get(0).sendKeys(Keys.CONTROL +"\n");
         String selectLinkOpeninNewWindow = Keys.chord((Keys.CONTROL + "\n"));
         wd.findElement(By.linkText("market.yandex.ru")).sendKeys(selectLinkOpeninNewWindow);
         ArrayList<String> tabs = new ArrayList<String>(wd.getWindowHandles());
@@ -92,4 +88,16 @@ public class TestsHelper {
     public boolean isNotebookHeaderPresent() {
         return wd.findElement(By.cssSelector("h1.title_js_inited")).getAttribute("title").contains("Ноутбуки");
     }
+
+
+    public String showTwelve () {
+       return wd.findElements(By.cssSelector("span.button__text ")).get(9).getText();
+    }
+
+
+    public int countElements () {
+      return wd.findElements(By.cssSelector("h3.n-snippet-card2__title")).size();
+    }
+
+
 }

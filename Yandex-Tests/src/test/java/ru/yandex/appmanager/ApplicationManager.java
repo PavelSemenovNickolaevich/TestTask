@@ -27,7 +27,7 @@ public class ApplicationManager {
         wd.quit();
     }
 
-    public TestsHelper getTestsHelper () {
+    public TestsHelper testHelper () {
         return testsHelper;
     }
 
