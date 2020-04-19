@@ -8,8 +8,8 @@ public class YandexScriptsTestOne extends TestBase {
     public void testYandex () throws Exception {
         app.findYandexMarket();
         app.selectProduct();
-        //       app.setHighPrice();
-        //      app.selectOption();
+        app.setHighPrice();
+        app.selectOption();
         //       app.setProduct();
         //       app.findProduct();
     }

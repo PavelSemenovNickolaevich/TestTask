@@ -5,10 +5,12 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import ru.yandex.tests.TestBase;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -74,11 +76,26 @@ public class ApplicationManager {
         wd.findElement(By.xpath("//button[@type='submit']")).click();
     }
 
-    public void selectOption () {
-        wd.findElement(By.xpath("//div[@id='search-prepack']/div/div/div[3]/div/div/div[2]/div[2]/div/div/fieldset/ul/li[6]/div/a/label/div")).click();
-        wd.findElement(By.xpath("//div[@id='search-prepack']/div/div/div[3]/div/div/div[2]/div[2]/div/div/fieldset/ul/li[8]/div/a/label/div")).click();
-        wd.findElement(By.xpath("(//button[@type='button'])[2]")).click();
-        wd.findElement(By.xpath("//div[@id='uniq15872317257651']/span")).click();
+    public void selectOption () throws InterruptedException {
+        Thread.sleep(4000);
+        scroll();
+        Thread.sleep(4000);
+    //    wd.findElements(By.cssSelector("li._1-l0XiE_ze")).get(5).findElement(By.id("7893318_152722")).click();
+   //     wd.findElements(By.cssSelector("li._1-l0XiE_ze")).get(8).findElement(By.id("7893318_152981")).click();
+        wd.findElements(By.cssSelector("div.LhMupC0dLR")).get(5).click();
+        wd.findElements(By.cssSelector("div.LhMupC0dLR")).get(7).click();
+        scrollMax();
+     //   wd.findElement(By.id("7893318_152722")).click();
+     //   wd.findElement(By.xpath(".//*[id = '7893318_152722']")).click();
+  //      wd.findElement(By.name("Производитель Lenovo")).click();
+     wd.findElement(By.cssSelector("span.select_js_inited")).click();
+
+       wd.findElement(By.cssSelector("button.button_focused_yes")).sendKeys(Keys.ARROW_UP,Keys.ENTER);
+  //      wd.findElement(By.linkText("Показывать по 48")).sendKeys("Показывать по 12");
+      //  wd.findElement(By.xpath("(//button[@type='button'])[2]")).click()
+       Thread.sleep(5000);
+
+  //     wd.findElements(By.cssSelector("select.select__control")).get(0).click();
     }
 
 
@@ -114,16 +131,19 @@ public class ApplicationManager {
         wd.findElement(By.linkText("market.yandex.ru")).sendKeys(selectLinkOpeninNewWindow);
         ArrayList<String> tabs = new ArrayList<String>(wd.getWindowHandles());
         wd.switchTo().window(tabs.get(1));
+        Thread.sleep(4000);
+    }
 
-        // wd.findElement(By.linkText("market.yandex.ru")).click();
-        //   wd.findElement(By.cssSelector("a.\"http://yandex.ru/clck/jsredir?bu=hsc95e&from=yandex.ru%3Bsearch%2F%3Bweb%3B%3B&text=&etext=2202.X2-a0a9PWdQ-rdwxbmX0L5mjqz2vJalIgY1dBXm63YZsZ3d0dWpjY2l3c2ZnZmZi.1a45e098cfe37169929cff5070d1eeff2cc6140e&uuid=&state=jLT9ScZ_wbo,&&cst=AiuY0DBWFJ5fN_r-AEszk-vBe2mdsP7wyfms6WV0f7_v2VFBvoTT8kjJ_sqQN1L4nO8HnXj_lJwEBIONfk4yyU1ZWM_0O5h7eeWz_uUVxRCsSVrUAHPT40MCdbQfiUEhii0jmS1RVn7MrfoZzEoM47ZHhNpoSpleqbGyDLJnv_9MuxcbDq0_RdslmWUGoMmY-RIOUt-wGLApPBwtft5JX3NpIBL8e2YpqUiPio5-GGXUvQBM-kZ7TRpPXnZX-ER3LCGk739ow460bDNt_yCdSI7aLoYVp_oqyoyviHqgEBFrPchw932yD3f8cYRvW5OPMF1GIKrtsKPQrR_d5zfIvfAqujqk8efPwSPXbz-0SbHz6eg3Filb_cdLB9vObP9cfmmPgUCvBQRjdAE1skLBKZ0wU_MoyhEwQZfwJ4tt3VV6HZqtrVLt-rF7_5nk6j0VMjkPYUgHH3LZYniZ3wp4MnO4Ucz2cpSCjHLKczxTbTDEuAEpERlNrTKCj4oHRwcr_CTO-1Xq1sYehl-TjztTFnAIU6Mp2nuA_TgGvOHa9x3FgDi9CE6tQVLqC-hgYtYxx6dwlXPVykoRtx-4o6nQiQA_Jq1Y0kjv9lQwerHqBQp0CiY_on7eSgcVsHm7zAXRwjBix0Ay7xza_OG3HD40ZTZbHwAYBcWe9ohgjahmHYCQHA_4LUPkcLjPzibK8n9RYpqy02Al815a_gmbCWQN5b5-kf2Uy9cqx1ErN11YRm5ImZbj5LDAGETI49XFMoRuL9jgUnwdR2jJ7GcyTzEKNKWpHKiVONY-mdHaB0eKA6O0qcTh3IevfVjUgS7r8Cq9EOH350sodUDi_kkVBypRTHDCNL08IwmXKQKoU5eXRxM,&data=UlNrNmk5WktYejY4cHFySjRXSWhXQmROUUdOXzNRVDdfekJ3UEROeHhtbFRWbmY0OTBuN2kzdS0wcWJVWDdjelV4eldsLVc4RFJQeVpGRWJWRzU5VklDT2ZWMEdaWTRORUVELUR0SVdGTjZDZUxrNlRZRmhlUSws&sign=e8a10536aa6c2bff0b4d21cebd8757fa&keyno=0&b64e=2&ref=orjY4mGPRjk5boDnW0uvlrrd71vZw9kp5uQozpMtKCWg6u_jfsR3Q5vYD5tly1LxQLzyKicLZLw,&l10n=ru&cts=1587287457871%40%40events%3D%5B%7B%22event%22%3A%22click%22%2C%22id%22%3A%22hsc95e%22%2C%22cts%22%3A1587287457871%2C%22fast%22%3A%7B%22organic%22%3A1%7D%2C%22service%22%3A%22web%22%2C%22event-id%22%3A%22k96tywy7nc%22%7D%5D&mc=4.588534464208534&hdtime=5307267.61\"")).click();
-        //  wd = new ChromeDriver();
-        //  wd.get(String.valueOf(link));
-        Thread.sleep(6000);
-        //wd.get("https://market.yandex.ru/");
-        // wd.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"n");
-        //  String newWindow = wd.getWindowHandle();
-        //  wd.switchTo().window(newWindow);
+    public void scroll() throws InterruptedException {
+        JavascriptExecutor js = (JavascriptExecutor)wd;
+        js.executeScript("window.scrollBy(0,600)", "");
+        Thread.sleep(4000);
+    }
+
+    public void scrollMax() throws InterruptedException {
+        JavascriptExecutor js = (JavascriptExecutor)wd;
+        js.executeScript("window.scrollBy(600,4500)", "");
+        Thread.sleep(4000);
     }
 
 }
