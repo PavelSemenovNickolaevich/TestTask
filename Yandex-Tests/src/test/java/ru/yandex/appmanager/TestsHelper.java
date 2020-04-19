@@ -88,4 +88,8 @@ public class TestsHelper {
         js.executeScript("window.scrollBy(600,4500)", "");
         Thread.sleep(4000);
     }
+
+    public boolean isNotebookHeaderPresent() {
+        return wd.findElement(By.cssSelector("h1.title_js_inited")).getAttribute("title").contains("Ноутбуки");
+    }
 }
