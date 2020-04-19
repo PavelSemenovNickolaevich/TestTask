@@ -8,16 +8,16 @@ import static org.junit.Assert.fail;
 
 public class TestBase {
 
-    protected final ApplicationManager applicationManager = new ApplicationManager();
+    protected final ApplicationManager app = new ApplicationManager();
 
     @Before
     public void setUp () throws Exception {
-        applicationManager.initYandexMarketSearch();
+        app.initYandexMarketSearch();
     }
 
     @After
     public void tearDown () throws Exception {
-        applicationManager.stop();
+        app.stop();
     }
 
 
