@@ -43,12 +43,13 @@ public class TestsHelper {
         wd.findElement(By.linkText("Ноутбуки")).click();
     }
 
-    public void setProduct () {
+    public void setProduct () throws InterruptedException {
         //  String nameComp  =  wd.findElements(By.cssSelector("div.n-snippet-list")).get(0).getText();
         String nameComp = wd.findElements(By.cssSelector("h3.n-snippet-card2__title")).get(0).findElement(By.cssSelector("a"))
                 .getAttribute("title");
         wd.findElement(By.id("header-search")).sendKeys(nameComp);
-        wd.findElements(By.linkText("Найти"));
+        wd.findElement(By.cssSelector("button.button2_js_inited")).click();
+        Thread.sleep(5000);
     }
 
     public void setHighPrice () {
@@ -100,4 +101,10 @@ public class TestsHelper {
     }
 
 
+    public NoteData getInfoBefore () {
+        String nameComp = wd.findElements(By.cssSelector("h3.n-snippet-card2__title")).get(0).findElement(By.cssSelector("a"))
+                .getAttribute("title");
+        String price = wd.findElements(By.cssSelector("div.pricE")).get(0).getText();
+        return Notedata(nameComp, price);
+    }
 }

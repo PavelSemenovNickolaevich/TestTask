@@ -19,6 +19,7 @@ public class YandexScriptsTestOne extends TestBase {
         app.testHelper().selectOption();
         String optionList = app.testHelper().showTwelve();
         String numberElement = String.valueOf(app.testHelper().countElements());
+        String dataBefore = app.testHelper().getInfoBefore();
         app.testHelper().setProduct();
         //       app.findProduct();
 
@@ -28,6 +29,7 @@ public class YandexScriptsTestOne extends TestBase {
     public  String cleaned (String list) {
         return list.replaceAll("\\s", "").replaceAll("Показыватьпо", "");
     }
+
 
 
 }
