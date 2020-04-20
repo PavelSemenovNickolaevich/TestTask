@@ -1,9 +1,11 @@
 package ru.yandex.tests;
 
-import org.junit.*;
+//import org.junit.*;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import ru.yandex.data.NoteData;
 
-import static org.junit.Assert.assertThat;
+//import static org.junit.Assert.assertThat;
 
 public class YandexScriptsTestOne extends TestBase {
 

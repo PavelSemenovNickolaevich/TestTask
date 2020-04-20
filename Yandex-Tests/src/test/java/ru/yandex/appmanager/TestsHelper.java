@@ -84,6 +84,7 @@ public class TestsHelper {
 
     //price for tab
     public void setPrice () throws InterruptedException {
+        Thread.sleep(1000);
         wd.findElement(By.id("glpricefrom")).sendKeys("20000");
         Thread.sleep(2000);
         wd.findElement(By.id("glpriceto")).sendKeys("25000");
@@ -153,9 +154,9 @@ public class TestsHelper {
     public boolean isCountListExists () {
         try {
             wd.findElement(By.cssSelector("span.select_js_inited")).isDisplayed();
-            return true;
-        } catch (NoSuchElementException e) {
             return false;
+        } catch (NoSuchElementException e) {
+            return true;
         }
     }
 
@@ -172,9 +173,9 @@ public class TestsHelper {
     }
 
     public TabData getInfoAfterSearch () {
-        String nameComp = wd.findElements(By.cssSelector("h3.n-snippet-card2__title")).get(1).findElement(By.cssSelector("a"))
+        String nameComp = wd.findElements(By.cssSelector("h3.n-snippet-card2__title")).get(0).findElement(By.cssSelector("a"))
                 .getAttribute("title");
-        String price = wd.findElements(By.cssSelector("div.price")).get(1).getText();
+        String price = wd.findElements(By.cssSelector("div.price")).get(0).getText();
         return new TabData(nameComp, price);
     }
 
