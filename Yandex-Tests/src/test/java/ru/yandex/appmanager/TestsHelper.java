@@ -1,9 +1,9 @@
 package ru.yandex.appmanager;
 
 import org.openqa.selenium.*;
+import ru.yandex.data.NoteData;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class TestsHelper {
     private WebDriver wd;
@@ -104,7 +104,15 @@ public class TestsHelper {
     public NoteData getInfoBefore () {
         String nameComp = wd.findElements(By.cssSelector("h3.n-snippet-card2__title")).get(0).findElement(By.cssSelector("a"))
                 .getAttribute("title");
-        String price = wd.findElements(By.cssSelector("div.pricE")).get(0).getText();
-        return Notedata(nameComp, price);
+        String price = wd.findElements(By.cssSelector("div.price")).get(0).getText();
+        return new NoteData(nameComp, price);
+    }
+
+    public NoteData getInfoAfter () {
+        String nameComp = wd.findElements(By.cssSelector("h3.n-snippet-card2__title")).get(1).findElement(By.cssSelector("a"))
+                .getAttribute("title");
+        String price = wd.findElements(By.cssSelector("div.price")).get(1).getText();
+        return new NoteData(nameComp, price);
+
     }
 }

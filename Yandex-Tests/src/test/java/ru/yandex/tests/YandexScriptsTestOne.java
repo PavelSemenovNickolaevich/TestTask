@@ -1,6 +1,7 @@
 package ru.yandex.tests;
 
 import org.junit.*;
+import ru.yandex.data.NoteData;
 
 import static org.junit.Assert.assertThat;
 
@@ -19,17 +20,24 @@ public class YandexScriptsTestOne extends TestBase {
         app.testHelper().selectOption();
         String optionList = app.testHelper().showTwelve();
         String numberElement = String.valueOf(app.testHelper().countElements());
-        String dataBefore = app.testHelper().getInfoBefore();
+        String dataBefore = String.valueOf(app.testHelper().getInfoBefore());
         app.testHelper().setProduct();
-        //       app.findProduct();
+        String dataAfter = String.valueOf(app.testHelper().getInfoAfter());
 
-        Assert.assertEquals(numberElement,cleaned(optionList));
+        Assert.assertEquals(numberElement, cleaned(optionList));
+        Assert.assertEquals(cleanedTitle(dataAfter), dataBefore);
+        System.out.println(dataAfter);
+        System.out.println(dataBefore);
     }
 
-    public  String cleaned (String list) {
-        return list.replaceAll("\\s", "").replaceAll("Показыватьпо", "");
+    public String cleaned (String list) {
+        return list.replaceAll("\\s", "")
+                .replaceAll("Показыватьпо", "");
     }
 
+    public String cleanedTitle (String nameComp) {
+        return nameComp.replaceAll(", цвет: черный", "");
+    }
 
 
 }
