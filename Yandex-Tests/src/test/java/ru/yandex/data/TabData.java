@@ -1,20 +1,18 @@
 package ru.yandex.data;
 
-public class NoteData {
-
-    private String  nameComp;
+public class TabData {
+    private String nameComp;
     private String price;
 
 
-    public NoteData (String nameComp, String price) {
+    public TabData (String nameComp, String price) {
         this.nameComp = nameComp;
         this.price = price;
     }
 
-
     @Override
     public String toString () {
-        return "NoteData{" +
+        return "TabData{" +
                 "nameComp='" + nameComp + '\'' +
                 ", price='" + price + '\'' +
                 '}';

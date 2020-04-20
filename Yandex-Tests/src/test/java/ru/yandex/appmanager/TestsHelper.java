@@ -2,6 +2,7 @@ package ru.yandex.appmanager;
 
 import org.openqa.selenium.*;
 import ru.yandex.data.NoteData;
+import ru.yandex.data.TabData;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,10 +39,10 @@ public class TestsHelper {
         Thread.sleep(6000);
         wd.findElements(By.cssSelector("div.LhMupC0dLR")).get(5).click();
         Thread.sleep(4000);
-     //   wd.findElement(By.cssSelector("span.select_js_inited")).click();
-    //    wd.findElement(By.cssSelector("button.button_focused_yes")).sendKeys(Keys.ARROW_UP, Keys.ENTER);
+        //   wd.findElement(By.cssSelector("span.select_js_inited")).click();
+        //    wd.findElement(By.cssSelector("button.button_focused_yes")).sendKeys(Keys.ARROW_UP, Keys.ENTER);
         Thread.sleep(3000);
-     //   scrollMaxTab();
+        //   scrollMaxTab();
         //wd.findElement(By.cssSelector("span.select_js_inited")).click();
         //   wd.findElement(By.cssSelector("button.button_focused_yes")).sendKeys(Keys.ARROW_UP, Keys.ENTER);
         Thread.sleep(2000);
@@ -58,7 +59,15 @@ public class TestsHelper {
     }
 
 
-    public void setProduct () throws InterruptedException {
+    public void setProductNote () throws InterruptedException {
+        String nameComp = wd.findElements(By.cssSelector("h3.n-snippet-card2__title")).get(0).findElement(By.cssSelector("a"))
+                .getAttribute("title");
+        wd.findElement(By.id("header-search")).sendKeys(nameComp);
+        wd.findElement(By.cssSelector("button.button2_js_inited")).click();
+        Thread.sleep(3000);
+    }
+
+    public void setProductTab () throws InterruptedException {
         String nameComp = wd.findElements(By.cssSelector("h3.n-snippet-card2__title")).get(0).findElement(By.cssSelector("a"))
                 .getAttribute("title");
         wd.findElement(By.id("header-search")).sendKeys(nameComp);
@@ -78,14 +87,6 @@ public class TestsHelper {
         wd.findElement(By.id("glpricefrom")).sendKeys("20000");
         Thread.sleep(2000);
         wd.findElement(By.id("glpriceto")).sendKeys("25000");
-    }
-
-
-    public String openInNewWindow (String url) {
-        String name = "some_random_name";
-        ((JavascriptExecutor) wd)
-                .executeScript("window.open(arguments[0],\"" + name + "\")", url);
-        return name;
     }
 
     public void findYandexMarket () throws InterruptedException {
@@ -146,21 +147,12 @@ public class TestsHelper {
                 .getAttribute("title");
         String price = wd.findElements(By.cssSelector("div.price")).get(1).getText();
         return new NoteData(nameComp, price);
-
     }
 
-//    public boolean isCountListExists () {
-//        try {
-//            wd.findElement((By.cssSelector("span.select_js_inited")));
-//            return false;
-//        } catch (NoSuchElementException e) {
-//            return true;
-//        }
-//    }
 
     public boolean isCountListExists () {
         try {
-          wd.findElement(By.cssSelector("span.select_js_inited")).isDisplayed();
+            wd.findElement(By.cssSelector("span.select_js_inited")).isDisplayed();
             return true;
         } catch (NoSuchElementException e) {
             return false;
@@ -170,6 +162,20 @@ public class TestsHelper {
     public int count () {
         List<WebElement> elements = wd.findElements(By.cssSelector("h3.n-snippet-card2__title"));
         return elements.size();
-
     }
+
+    public TabData getInfoBeforeSearch () {
+        String nameComp = wd.findElements(By.cssSelector("h3.n-snippet-card2__title")).get(0).findElement(By.cssSelector("a"))
+                .getAttribute("title");
+        String price = wd.findElements(By.cssSelector("div.price")).get(0).getText();
+        return new TabData(nameComp, price);
+    }
+
+    public TabData getInfoAfterSearch () {
+        String nameComp = wd.findElements(By.cssSelector("h3.n-snippet-card2__title")).get(1).findElement(By.cssSelector("a"))
+                .getAttribute("title");
+        String price = wd.findElements(By.cssSelector("div.price")).get(1).getText();
+        return new TabData(nameComp, price);
+    }
+
 }

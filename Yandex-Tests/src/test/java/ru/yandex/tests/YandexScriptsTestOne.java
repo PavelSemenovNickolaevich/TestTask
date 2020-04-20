@@ -21,7 +21,7 @@ public class YandexScriptsTestOne extends TestBase {
         String optionList = app.testHelper().showTwelve();
         String numberElement = String.valueOf(app.testHelper().countElements());
         String dataBefore = String.valueOf(app.testHelper().getInfoBefore());
-        app.testHelper().setProduct();
+        app.testHelper().setProductNote();
         String dataAfter = String.valueOf(app.testHelper().getInfoAfter());
 
         Assert.assertEquals(numberElement, cleaned(optionList));
