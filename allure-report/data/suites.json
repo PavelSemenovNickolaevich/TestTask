@@ -1,0 +1,35 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Suite1",
+    "children" : [ {
+      "name" : "testYandexOne",
+      "uid" : "bd7918d27022e58d",
+      "parentUid" : "1b55da8b4eccbbb6df84e16f476662eb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587415422681,
+        "stop" : 1587415451046,
+        "duration" : 28365
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testYandexTwo",
+      "uid" : "27fa6d420f492cda",
+      "parentUid" : "1b55da8b4eccbbb6df84e16f476662eb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587415460853,
+        "stop" : 1587415504406,
+        "duration" : 43553
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "1b55da8b4eccbbb6df84e16f476662eb"
+  } ]
+}

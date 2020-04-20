@@ -1,0 +1,46 @@
+{
+  "uid" : "bd7918d27022e58d",
+  "name" : "testYandexOne",
+  "fullName" : "Suite1.testYandexOne",
+  "historyId" : "3fe14a4e1cba27d6cc55bc6d0399c97b",
+  "time" : {
+    "start" : 1587415422681,
+    "stop" : 1587415451046,
+    "duration" : 28365
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Suite1"
+  }, {
+    "name" : "testClass",
+    "value" : "Suite1"
+  }, {
+    "name" : "testMethod",
+    "value" : "testYandexOne"
+  }, {
+    "name" : "package",
+    "value" : "Suite1"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bd7918d27022e58d.json",
+  "parameterValues" : [ ]
+}

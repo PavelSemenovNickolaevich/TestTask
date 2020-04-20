@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1587415409576" stop="1587415505403">
+    <name>Suite1</name>
+    <test-cases>
+        <test-case start="1587415422681" stop="1587415451046" status="passed">
+            <name>testYandexOne</name>
+            <steps/>
+            <attachments/>
+            <labels/>
+        </test-case>
+        <test-case start="1587415460853" stop="1587415504406" status="passed">
+            <name>testYandexTwo</name>
+            <steps/>
+            <attachments/>
+            <labels/>
+        </test-case>
+    </test-cases>
+    <labels/>
+</ns2:test-suite>

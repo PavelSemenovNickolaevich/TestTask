@@ -1,0 +1,46 @@
+{
+  "uid" : "27fa6d420f492cda",
+  "name" : "testYandexTwo",
+  "fullName" : "Suite1.testYandexTwo",
+  "historyId" : "8be4ee022d0feda2f4227b29a9246205",
+  "time" : {
+    "start" : 1587415460853,
+    "stop" : 1587415504406,
+    "duration" : 43553
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Suite1"
+  }, {
+    "name" : "testClass",
+    "value" : "Suite1"
+  }, {
+    "name" : "testMethod",
+    "value" : "testYandexTwo"
+  }, {
+    "name" : "package",
+    "value" : "Suite1"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "27fa6d420f492cda.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,21 @@
+[ {
+  "uid" : "bd7918d27022e58d",
+  "name" : "testYandexOne",
+  "time" : {
+    "start" : 1587415422681,
+    "stop" : 1587415451046,
+    "duration" : 28365
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "27fa6d420f492cda",
+  "name" : "testYandexTwo",
+  "time" : {
+    "start" : 1587415460853,
+    "stop" : 1587415504406,
+    "duration" : 43553
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
