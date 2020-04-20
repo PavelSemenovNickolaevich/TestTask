@@ -20,14 +20,5 @@ dependencies {
     testCompile "ru.yandex.qatools.allure:allure-testng-adaptor:1.4.0.RC4"
 }
 
-test {
-    useJUnit()
-}
-
-task tests(type: Test) {
-    useJUnit(){
-
-    }
-}
 
 
