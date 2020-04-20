@@ -1,3 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Mon Apr 20 23:43:42 MSK 2020","Mon Apr 20 23:44:11 MSK 2020","28365","","Suite1","","Suite1","testYandexOne","testYandexOne",""
-"passed","Mon Apr 20 23:44:20 MSK 2020","Mon Apr 20 23:45:04 MSK 2020","43553","","Suite1","","Suite1","testYandexTwo","testYandexTwo",""

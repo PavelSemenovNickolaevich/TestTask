@@ -10,7 +10,6 @@ import java.util.concurrent.TimeUnit;
 public class ApplicationManager {
     private WebDriver wd;
     private TestsHelper testsHelper;
-    private boolean acceptNextAlert = true;
     private String browser;
 
     public ApplicationManager (String browser) {
@@ -19,7 +18,7 @@ public class ApplicationManager {
 
 
     public void initYandexMarketSearch () throws InterruptedException {
-        if ( browser == BrowserType.CHROME) {
+        if (browser == BrowserType.CHROME) {
             wd = new ChromeDriver();
         } else if (browser == BrowserType.FIREFOX) {
             wd = new FirefoxDriver();
@@ -40,38 +39,5 @@ public class ApplicationManager {
 
     public TestsHelper testHelper () {
         return testsHelper;
-    }
-
-    public boolean isElementPresent (By by) {
-        try {
-            wd.findElement(by);
-            return true;
-        } catch (NoSuchElementException e) {
-            return false;
-        }
-    }
-
-    public boolean isAlertPresent () {
-        try {
-            wd.switchTo().alert();
-            return true;
-        } catch (NoAlertPresentException e) {
-            return false;
-        }
-    }
-
-    public String closeAlertAndGetItsText () {
-        try {
-            Alert alert = wd.switchTo().alert();
-            String alertText = alert.getText();
-            if (acceptNextAlert) {
-                alert.accept();
-            } else {
-                alert.dismiss();
-            }
-            return alertText;
-        } finally {
-            acceptNextAlert = true;
-        }
     }
 }
