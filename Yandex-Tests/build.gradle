@@ -14,11 +14,20 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-   // implementation 'org.junit.jupiter:junit-jupiter-engine:5.6.2'
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    testCompile "ru.yandex.qatools.allure:allure-testng-adaptor:1.4.0.RC4"
+}
+
+test {
+    useJUnit()
+}
+
+task tests(type: Test) {
+    useJUnit(){
+
+    }
 }
 
 

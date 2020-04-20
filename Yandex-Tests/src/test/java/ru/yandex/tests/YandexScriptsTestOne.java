@@ -8,16 +8,16 @@ import static org.junit.Assert.assertThat;
 public class YandexScriptsTestOne extends TestBase {
 
     @Test
-    public void testYandex () throws Exception {
+    public void testYandexOne () throws Exception {
         app.testHelper().findYandexMarket();
-        app.testHelper().selectProduct();
+        app.testHelper().selectProductNote();
         if (app.testHelper().isNotebookHeaderPresent()) {
             System.out.println("Header exist");
         } else {
-            System.out.println("Header doesnt exist");
+            System.out.println("Header doesn't exist");
         }
         app.testHelper().setHighPrice();
-        app.testHelper().selectOption();
+        app.testHelper().selectOptionNote();
         String optionList = app.testHelper().showTwelve();
         String numberElement = String.valueOf(app.testHelper().countElements());
         String dataBefore = String.valueOf(app.testHelper().getInfoBefore());

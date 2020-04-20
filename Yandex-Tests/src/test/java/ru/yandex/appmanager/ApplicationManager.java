@@ -2,6 +2,8 @@ package ru.yandex.appmanager;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.BrowserType;
 
 import java.util.concurrent.TimeUnit;
 
@@ -9,10 +11,19 @@ public class ApplicationManager {
     private WebDriver wd;
     private TestsHelper testsHelper;
     private boolean acceptNextAlert = true;
+    private String browser;
+
+    public ApplicationManager (String browser) {
+        this.browser = browser;
+    }
 
 
     public void initYandexMarketSearch () throws InterruptedException {
-        wd = new ChromeDriver();
+        if ( browser == BrowserType.CHROME) {
+            wd = new ChromeDriver();
+        } else if (browser == BrowserType.FIREFOX) {
+            wd = new FirefoxDriver();
+        }
         wd.manage().window().maximize();
         wd.get("https://yandex.ru/");
         wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
